@@ -4,10 +4,12 @@
   "description": "Assandra Falls Personal Website",
   "main": "index.js",
   "scripts": {
+    "build": "NODE_ENV=production parcel build src/index.html",
     "dev": "parcel src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "http-server dist/"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "http-server": "^0.12.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
