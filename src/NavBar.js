@@ -1,14 +1,23 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "@reach/router";
 
-class NavBar extends React.Component {
+class NavBar extends Component {
   render() {
     return (
       <div className="nav">
         <ul>
-          <li>Home</li>
-          <li>Software Art</li>
-          <li>Contracting & Freelancing</li>
-          <li>Contact</li>
+          <Link to="/">
+            <li>Home</li>
+          </Link>
+          <Link to="/software-art">
+            <li>Software Art</li>
+          </Link>
+          <Link to="/contracting-and-freelancing">
+            <li>Contracting & Freelancing</li>
+          </Link>
+          <Link to="/contact-us">
+            <li>Contact Us</li>
+          </Link>
         </ul>
       </div>
     );

@@ -1,13 +1,16 @@
-import React from "react";
+import { Link } from "@reach/router";
+import React, { Component } from "react";
 import the_letter_A from "./../public/the_letter_A.jpg";
 
-class Header extends React.Component {
+class Header extends Component {
   render() {
     return (
-      <div className="header">
-        <img src={the_letter_A} alt="The letter A" />
-        <h1>Assandra Falls</h1>
-      </div>
+      <header className="header">
+        <Link to="/" >
+          <img src={the_letter_A} alt="The letter A" />
+          <h1>Assandra Falls</h1>
+        </Link>
+      </header>
     );
   }
 }
