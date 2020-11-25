@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import { Router } from "@reach/router";
 import NavBar from "./NavBar";
 import Header from "./Header";
+import Footer from "./Footer"
 import HomePage from "./HomePage";
 import ContactUsPage from "./ContactUsPage";
 import SoftwareArtPage from "./SoftwareArtPage";
@@ -19,6 +20,7 @@ const App = () => {
       <ContractingAndFreelancingPage path="/contracting-and-freelancing" />
       <ContactUsPage path="/contact-us" />
       </Router>
+      <Footer />
     </React.StrictMode>
   );
 };

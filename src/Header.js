@@ -1,5 +1,5 @@
-import { Link } from "@reach/router";
 import React, { Component } from "react";
+import { Link } from "@reach/router";
 import the_letter_A from "./../public/the_letter_A.jpg";
 
 class Header extends Component {

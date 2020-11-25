@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 const mapStyles = {
-  width: "200px",
-  height: "200px",
+  width: "100%",
+  height: "100%",
 };
 
 export class MapContainer extends Component {
@@ -34,14 +34,14 @@ export class MapContainer extends Component {
   };
   render() {
     return (
-      <Map
-        google={this.props.google}
-        zoom={3}
-        style={mapStyles}
-        initialCenter={{ lat: 50.482814028946706, lng: 9.953247916895117 }}
-      >
-        {this.displayMarkers()}
-      </Map>
+        <Map
+          google={this.props.google}
+          zoom={3}
+          style={mapStyles}
+          initialCenter={{ lat: 50.482814028946706, lng: 9.953247916895117 }}
+        >
+          {this.displayMarkers()}
+        </Map>
     );
   }
 }

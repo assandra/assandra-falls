@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import ContactUsForm from "./ContactUsForm"
+import ContactDetails from "./ContactDetails";
+import ContactUsForm from "./ContactUsForm";
 import GoogleApiWrapper from "./MapContainer";
 
 class ContactUsPage extends Component {
@@ -13,8 +14,11 @@ class ContactUsPage extends Component {
           <br />
           Either via Facebook, LinkedIn or the contact form below.
         </p>
-<ContactUsForm />
-<GoogleApiWrapper />
+        <ContactUsForm />
+        <ContactDetails />
+      
+        <p> You can find us in the following locations</p>
+        <GoogleApiWrapper />
       </div>
     );
   }
