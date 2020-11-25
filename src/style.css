@@ -96,6 +96,7 @@ body {
   margin-left: 200px; /* Same as the width of the sidebar */
   padding: 0px 10px;
   padding-top: 150px;
+  overflow: hidden;
 }
 
 .content p {
@@ -109,6 +110,7 @@ body {
 }
 
 .form {
+  float:left;
   text-align: left;
   padding-left: 10px;
 }
@@ -129,8 +131,29 @@ body {
 }
 
 .contact-icons {
-  width: 200px;
-  height: 200px;
- 
-  float: right;
+  overflow: hidden;
+  width: 600px;
+
 }
+
+.contact-icons img {
+  width:100px;
+  height:130px;
+  padding-left: 90px;
+  padding-top: 100px;
+}
+
+.facebook {
+  float:left;
+}
+
+.linkedIn {
+  float:left;
+}
+
+.twitter {
+  float:left;
+}
+
+
+
