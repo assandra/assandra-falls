@@ -79,5 +79,23 @@ body {
 }
 
 .content h1 {
-  text-align: center;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.form {
+  text-align: left;
+  padding-left: 10px;
+
+}
+
+.form input {
+  text-align: left;
+  width: 350px;
+  
+}
+
+.form input textarea {
+  resize: none;
+  height: 300px;
 }
