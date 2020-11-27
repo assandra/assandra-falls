@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { isEmail } from "validator/lib/isEmail";
-
+import ReCAPTCHA from "react-google-recaptcha";
+ 
 class ContactUsForm extends Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ class ContactUsForm extends Component {
     let isFormValid = true;
 
     // TODO fix validation
-    
+
     // let errors = {};
 
     // const isEmailValid = isEmail(this.state.email);
@@ -39,7 +40,6 @@ class ContactUsForm extends Component {
   }
 
   handleSubmit = (event) => {
-
     if (this.handleValidation()) {
       alert(
         "Form successfully submitted with the following details: " +
@@ -102,6 +102,12 @@ class ContactUsForm extends Component {
             id="message"
             placeholder="Enter your message"
             value={this.state.message}
+            onChange={this.handleChange}
+          />
+          <br />
+          <br />
+          <ReCAPTCHA
+            sitekey={process.env.RECAPTCHA_SITE_KEY}
             onChange={this.handleChange}
           />
           <br />
