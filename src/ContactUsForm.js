@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { isEmail } from "validator/lib/isEmail";
 
 class ContactUsForm extends Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class ContactUsForm extends Component {
       name: "",
       email: "",
       message: "",
+      errors: {},
     };
   }
 
@@ -16,25 +18,54 @@ class ContactUsForm extends Component {
     this.setState({ ...this.state, [event.target.id]: value });
   };
 
+  handleValidation() {
+    let isFormValid = true;
+
+    // TODO fix validation
+    
+    // let errors = {};
+
+    // const isEmailValid = isEmail(this.state.email);
+    // if (isEmailValid) {
+    //   isFormValid = false;
+    //   errors["email"] = "Email is not valid";
+    // }
+
+    // alert(isFormValid);
+
+    // this.setState({ errors: errors });
+
+    return isFormValid;
+  }
+
   handleSubmit = (event) => {
-    alert(
-      "Info submitted was: " +
-        "\n" +
-        this.state.name +
-        "\n" +
-        this.state.email +
-        "\n" +
-        this.state.message
-    );
+
+    if (this.handleValidation()) {
+      alert(
+        "Form successfully submitted with the following details: " +
+          "\n" +
+          this.state.name +
+          "\n" +
+          this.state.email +
+          "\n" +
+          this.state.message
+      );
+    } else {
+      alert(
+        "Form unsuccessfully submitted with the following errors: " +
+          "\n" +
+          this.state.errors
+      );
+    }
     event.preventDefault();
   };
 
-  isValid = () => {
+  isEmptyForm = () => {
     return this.state.name === "" ||
       this.state.email === "" ||
       this.state.message === ""
-      ? false
-      : true;
+      ? true
+      : false;
   };
 
   render() {
@@ -75,7 +106,7 @@ class ContactUsForm extends Component {
           />
           <br />
           <br />
-          <button disabled={!this.isValid()} type="submit">
+          <button disabled={this.isEmptyForm()} type="submit">
             Submit
           </button>
         </form>
